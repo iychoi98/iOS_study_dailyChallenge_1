@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ReviewWriteViewController" customModule="dailychallenge_day1" customModuleProvider="target">
             <connections>
+                <outlet property="tableView" destination="mY9-Qo-7JE" id="hyy-sg-6Ot"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -22,14 +23,46 @@
                     <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s2h-wJ-GA9">
+                    <rect key="frame" x="0.0" y="587" width="375" height="80"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hdU-na-Qre">
+                            <rect key="frame" x="16" y="4" width="343" height="60"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GfL-VQ-DLu">
+                                    <rect key="frame" x="150.5" y="19.5" width="42" height="21"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="60" id="0un-FM-Chb"/>
+                                <constraint firstItem="GfL-VQ-DLu" firstAttribute="centerX" secondItem="hdU-na-Qre" secondAttribute="centerX" id="a6p-U5-GI6"/>
+                                <constraint firstItem="GfL-VQ-DLu" firstAttribute="centerY" secondItem="hdU-na-Qre" secondAttribute="centerY" id="h0P-Ba-eaX"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="hdU-na-Qre" firstAttribute="leading" secondItem="s2h-wJ-GA9" secondAttribute="leading" constant="16" id="4NQ-gF-unh"/>
+                        <constraint firstAttribute="bottom" secondItem="hdU-na-Qre" secondAttribute="bottom" constant="16" id="GcR-SI-VkR"/>
+                        <constraint firstAttribute="trailing" secondItem="hdU-na-Qre" secondAttribute="trailing" constant="16" id="Q3M-oh-1y9"/>
+                        <constraint firstAttribute="height" constant="80" id="Y9o-Fv-pkj"/>
+                    </constraints>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="mY9-Qo-7JE" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="4Wj-8e-xdU"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="s2h-wJ-GA9" secondAttribute="trailing" id="Qh3-37-HYF"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="s2h-wJ-GA9" secondAttribute="bottom" id="Wd8-nJ-dXi"/>
                 <constraint firstItem="mY9-Qo-7JE" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="YcE-Wv-msk"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="mY9-Qo-7JE" secondAttribute="trailing" id="c5l-wS-gLj"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="mY9-Qo-7JE" secondAttribute="bottom" id="ceI-60-Ixn"/>
+                <constraint firstItem="s2h-wJ-GA9" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="geH-8B-t2i"/>
             </constraints>
             <point key="canvasLocation" x="25" y="20"/>
         </view>
