@@ -16,17 +16,31 @@ let REVIEW_CHECK_OPTIONS: [String] = [
 
 import UIKit
 
-class ReviewCheckCell: UITableViewCell {
+private let SELECTED_CHECKBOX_IMAGE: String = "square"
+private let DESELECTED_CHECKBOX_IMAGE: String = ""
 
+class ReviewCheckCell: UITableViewCell {
+    @IBOutlet weak var optionLabel: UILabel!
+    @IBOutlet weak var optionCheckBoxButton: UIButton!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+        initView()
     }
     
+    private func initView() {
+        
+    }
+    
+    func updateUI(index: Int) {
+        optionLabel.text = REVIEW_CHECK_OPTIONS[index]
+    }
+    
+    func setSelectedState() {
+        optionCheckBoxButton.
+    }
+    
+    func setDeselectedState() {
+        
+    }
 }

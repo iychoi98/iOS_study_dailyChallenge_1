@@ -19,8 +19,27 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="mY9-Qo-7JE">
-                    <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZnF-Eg-3Id">
+                    <rect key="frame" x="0.0" y="20" width="375" height="50"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="xmark" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="taQ-LJ-yTF">
+                            <rect key="frame" x="16" y="17" width="20" height="15.5"/>
+                            <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="20" id="VL2-bc-LLk"/>
+                                <constraint firstAttribute="width" constant="20" id="zUS-SX-ojy"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="QcM-bR-lOk"/>
+                        <constraint firstItem="taQ-LJ-yTF" firstAttribute="centerY" secondItem="ZnF-Eg-3Id" secondAttribute="centerY" id="XjP-LD-GcZ"/>
+                        <constraint firstItem="taQ-LJ-yTF" firstAttribute="leading" secondItem="ZnF-Eg-3Id" secondAttribute="leading" constant="16" id="vrj-7o-exN"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="mY9-Qo-7JE">
+                    <rect key="frame" x="0.0" y="72" width="375" height="515"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s2h-wJ-GA9">
@@ -56,18 +75,22 @@
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ZnF-Eg-3Id" secondAttribute="trailing" id="2G3-h1-yXS"/>
                 <constraint firstItem="mY9-Qo-7JE" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="4Wj-8e-xdU"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="s2h-wJ-GA9" secondAttribute="trailing" id="Qh3-37-HYF"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="s2h-wJ-GA9" secondAttribute="bottom" id="Wd8-nJ-dXi"/>
-                <constraint firstItem="mY9-Qo-7JE" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="YcE-Wv-msk"/>
+                <constraint firstItem="mY9-Qo-7JE" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="52" id="YcE-Wv-msk"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="mY9-Qo-7JE" secondAttribute="trailing" id="c5l-wS-gLj"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="mY9-Qo-7JE" secondAttribute="bottom" id="ceI-60-Ixn"/>
+                <constraint firstItem="s2h-wJ-GA9" firstAttribute="top" secondItem="mY9-Qo-7JE" secondAttribute="bottom" id="gFg-FG-PKc"/>
                 <constraint firstItem="s2h-wJ-GA9" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="geH-8B-t2i"/>
+                <constraint firstItem="ZnF-Eg-3Id" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="jQH-Ll-gy6"/>
+                <constraint firstItem="ZnF-Eg-3Id" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="pmS-hX-yoB"/>
             </constraints>
             <point key="canvasLocation" x="25" y="20"/>
         </view>
     </objects>
     <resources>
+        <image name="xmark" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
